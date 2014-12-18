@@ -1,0 +1,29 @@
+Odesk contains the following:
+1.  Source: src/main/java
+	-->  mau.odesk.ArrayUtil.java
+2.  Test:  src/test/java
+	-->  mau.odesk.ArrayUtilTest.java
+3.  pom.xml
+4.  target
+	--> odesk-1.0.SNAPSHOT-sources.jar
+	--> odesk-1.0.SNAPSHOT.jar
+	
+
+How to run the code locally:
+ 1.  Copy the odesk-1.0.SNAPSHOT.jar to your local directory.
+ 2.  Open command prompt and go to the directory where you copied the jar file.
+ 3.  Execute the following:
+	 java -cp <local-dir>\odesk-1.0-SNAPSHOT.jar mau.odesk.ArrayUtil <array> <rotateBy>
+	 
+	 where 	<local-dir> - the directory where you saved the jar file
+	 		<array>		- a number which will be converted to an array integer 
+	 						i.e. 123456 will be converted to [1,2,3,4,5,6]
+	 		<rotateBy>	- the N number of rotations
+
+	 Example:
+	 java -cp target\odesk-1.0-SNAPSHOT.jar mau.odesk.ArrayUtil 123456 2
+	 
+	 Result:  [5,6,1,2,3,4]
+	 
+
+How to 
