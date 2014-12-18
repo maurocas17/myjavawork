@@ -11,22 +11,24 @@ Odesk contains the following:
 	-->  mau.odesk.ArrayUtil.java
 2.  Test:  src/test/java
 	-->  mau.odesk.ArrayUtilTest.java
-3.  pom.xml
-4.  target
+3.  lib:  junit-4.8.2.jar
+4.  pom.xml
+5.  jar files under odesk
 	--> odesk-1.0-SNAPSHOT-sources.jar
 	--> odesk-1.0-SNAPSHOT.jar
 	--> odesk-1.0-SNAPSHOT-tests.jar
 	
 
 How to run and test the code via command line:
- 1.  Copy the odesk-1.0-SNAPSHOT.jar and odesk-1.0-SNAPSHOT-tests.jar to your local directory.
-
- 2.  Open command prompt and go to the directory where you copied the jar files.
+ 1.  Download the zip file and extract odesk folder and its content to your working directory.
+ 
+ 2.  Open command prompt and go to the directory where you copied the odesk\* files.
 
  3.  Run the test.
- 	 java -cp <junit-jar>;<local-dir\odesk-1.0-SNAPSHOT.jar;<local-dir>\odesk-1.0-SNAPSHOT-tests.jar org.junit.runner.JUnitCore mau.odesk.ArrayUtilTest
+ 	 java -cp <junit-jar>;<local-dir>\odesk-1.0-SNAPSHOT.jar;<local-dir>\odesk-1.0-SNAPSHOT-tests.jar org.junit.runner.JUnitCore mau.odesk.ArrayUtilTest
  	 
- 	 Note: You can use any 4.* junit version
+	 where 	<local-dir> - the directory where you saved odesk files. This is relative path from your working directory.
+			<junit-jar> - junit-4.8.2.jar relative path from your working directory.  i.e. odesk\lib\junit-4.8.2.jar
  	 
  	 
  4.  Run the code:
