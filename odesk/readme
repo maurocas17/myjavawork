@@ -1,3 +1,11 @@
+Environment used:
+1.  java - jdk 1.7
+2.  maven - 3.2.3
+3.  junit - 4.8.2  
+4.  eclipse kepler
+5.  windows 7
+
+
 Odesk contains the following:
 1.  Source: src/main/java
 	-->  mau.odesk.ArrayUtil.java
@@ -5,14 +13,23 @@ Odesk contains the following:
 	-->  mau.odesk.ArrayUtilTest.java
 3.  pom.xml
 4.  target
-	--> odesk-1.0.SNAPSHOT-sources.jar
-	--> odesk-1.0.SNAPSHOT.jar
+	--> odesk-1.0-SNAPSHOT-sources.jar
+	--> odesk-1.0-SNAPSHOT.jar
+	--> odesk-1.0-SNAPSHOT-tests.jar
 	
 
-How to run the code locally:
- 1.  Copy the odesk-1.0.SNAPSHOT.jar to your local directory.
- 2.  Open command prompt and go to the directory where you copied the jar file.
- 3.  Execute the following:
+How to run and test the code via command line:
+ 1.  Copy the odesk-1.0-SNAPSHOT.jar and odesk-1.0-SNAPSHOT-tests.jar to your local directory.
+
+ 2.  Open command prompt and go to the directory where you copied the jar files.
+
+ 3.  Run the test.
+ 	 java -cp <junit-jar>;<local-dir\odesk-1.0-SNAPSHOT.jar;<local-dir>\odesk-1.0-SNAPSHOT-tests.jar org.junit.runner.JUnitCore mau.odesk.ArrayUtilTest
+ 	 
+ 	 Note: You can use any 4.* junit version
+ 	 
+ 	 
+ 4.  Run the code:
 	 java -cp <local-dir>\odesk-1.0-SNAPSHOT.jar mau.odesk.ArrayUtil <array> <rotateBy>
 	 
 	 where 	<local-dir> - the directory where you saved the jar file
@@ -25,5 +42,27 @@ How to run the code locally:
 	 
 	 Result:  [5,6,1,2,3,4]
 	 
+	 Note:  If no values passed in the argument, default is array=123456 rotateBy=2
+	 
 
-How to 
+How to run via maven:
+1.  Download the project zip file and extract odesk\* to your workspace.
+2.  Open command prompt and initialize maven environment by running the below commands:
+		# change according to your environment settings
+		SET M2_HOME=C:\apache-maven-3.2.3
+		SET M2=%M2_HOME%\bin
+		SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_03
+		SET MAVEN_OPTS=-Xms256m -Xmx512m
+		SET PATH=%M2%;%JAVA_HOME%\bin;%PATH%
+3.  Go to workspace odesk
+4.  To run the test, execute mvn test
+5.  To run the code, execute item 4 of How to run via command line.
+
+
+How to run via eclipse:
+1.  Download the project zip file and extract odesk\* to your workspace.
+2.  Import maven project
+3.  Right-click project->maven->Update Project
+4.  Run Junit test, right-click ArrayUtilTest.java->Run As Junit Test
+5.  Right click ArrayUtil.java-> Run as Java Application
+
